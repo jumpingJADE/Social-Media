@@ -1,0 +1,16 @@
+/* --- Profile --- */
+.profile-photo{
+  width: 2.7rem;
+  min-width: 2.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.16rem solid var(--color-primary);
+}
+
+.profile-photo img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
