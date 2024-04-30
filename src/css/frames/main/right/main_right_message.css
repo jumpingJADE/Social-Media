@@ -59,3 +59,21 @@
   top: 1.2rem;
   border-radius: 0.5rem;
 }
+
+.friend-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.friend-list .profile{
+  border-radius: 50px;
+  box-shadow: 10px 10px 10px var(--color-white),
+  -10px -10px 10px #fff;
+  padding: 0;
+}
+
+.friend-list .profile h2{
+  font-size: 0.9rem;
+}

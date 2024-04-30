@@ -1,10 +1,13 @@
-import { profile, sidebar, highline } from '/data/db.json';
+import { profile, sidebar, highline, message, cards, request } from '/data/db.json';
 import { Profile } from '@/js/components/mainLeft/profile';
-import {Sidebar} from '@/js/components/mainLeft/sidebar'
+import { Sidebar } from '@/js/components/mainLeft/sidebar'
 import { create_post } from './components/mainLeft/createPost';
-import {Highlight} from '@/js/components/mainMiddle/highline';
-import { create_post as  create_middle_post} from '@/js/components/mainMiddle/createPost.js';
-import { create_message } from './components/mainRight/createMessage';
+import { Highlight } from '@/js/components/mainMiddle/highline';
+import { create_post as create_middle_post } from '@/js/components/mainMiddle/createPost.js';
+import { create_message } from '@/js/components/mainRight/createMessage';
+import { FriendList } from '@/js/components/mainRight/fridendList';
+import { RequestList } from '@/js/components/mainRight/requestList';
+import { CardList } from '@/js/components/mainMiddle/cardList';
 /* NavBar */
 export const navbar = document.querySelector('nav')
 export const navbar_container = navbar.querySelector('.container')
@@ -33,8 +36,8 @@ const main_middle_highline = new Highlight(highline).build()
 main_middle.appendChild(main_middle_highline)
 const main_middle_post = create_middle_post(profile)
 main_middle.appendChild(main_middle_post)
-// const main_middle_card_list = new CardList(cards).build();
-// main_middle.appendChild(main_middle_card_list)
+const main_middle_card_list = new CardList(cards).build();
+main_middle.appendChild(main_middle_card_list)
 /* Create News */
 
 
@@ -54,3 +57,7 @@ main_middle.appendChild(main_middle_post)
 export const main_right = main_container.querySelector('.main-right')
 export const main_right_message = create_message();
 main_right.appendChild(main_right_message)
+const main_right_friend_list = new FriendList(message).build();
+main_right_message.appendChild(main_right_friend_list)
+const main_right_request_list = new RequestList(request).build();
+main_right.appendChild(main_right_request_list)
