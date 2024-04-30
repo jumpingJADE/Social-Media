@@ -1,21 +1,24 @@
 /* --- Media ---*/
-@media (1000px <= width <= 1200px){
-  .main-left{
+@media (1000px <= width <=1200px) {
+  .main-left {
     display: none;
   }
-  mian .container{
+
+  main .container {
     grid-template-columns: auto 30dvw;
   }
 }
 
-@media (width < 1000px){
-  .main-left{
+@media (width < 1000px) {
+  .main-left {
     display: none;
   }
-  mian .container{
+
+  main .container {
     grid-template-columns: auto;
   }
-  .main-right{
+
+  .main-right {
     display: none;
   }
 }
